@@ -63,15 +63,47 @@
 		5289B2D128579EEA0011B3D5 /* GBFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
-				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
-				5289B2D628579EEA0011B3D5 /* ViewController.swift */,
-				5289B2D828579EEA0011B3D5 /* Main.storyboard */,
-				5289B2DB28579EEB0011B3D5 /* Assets.xcassets */,
-				5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */,
-				5289B2E028579EEB0011B3D5 /* Info.plist */,
+				529EAD1A285904DF0078F5B3 /* App */,
+				529EAD19285904AB0078F5B3 /* Resources */,
+				529EAD182859046C0078F5B3 /* Environments */,
 			);
 			path = GBFrameworks;
+			sourceTree = "<group>";
+		};
+		529EAD182859046C0078F5B3 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2E028579EEB0011B3D5 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		529EAD19285904AB0078F5B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D828579EEA0011B3D5 /* Main.storyboard */,
+				5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */,
+				5289B2DB28579EEB0011B3D5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		529EAD1A285904DF0078F5B3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
+				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
+				529EAD1B285904EA0078F5B3 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		529EAD1B285904EA0078F5B3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D628579EEA0011B3D5 /* ViewController.swift */,
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
@@ -88,7 +120,6 @@
 				E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */,
 				97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

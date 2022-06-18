@@ -35,6 +35,11 @@ class MapViewController: UIViewController {
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.allowsBackgroundLocationUpdates = true
+        locationManager?.pausesLocationUpdatesAutomatically = false
+        locationManager?.startMonitoringSignificantLocationChanges()
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager?.distanceFilter = 10
     }
 
     private func updateLocation() {

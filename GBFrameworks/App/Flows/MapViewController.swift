@@ -12,6 +12,18 @@ import CoreLocation
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
 
+    @IBAction func newTrackButtonTap(_ sender: Any) {
+        route?.map = nil
+        route = GMSPolyline()
+        routePath = GMSMutablePath()
+        route?.map = mapView
+        locationManager?.startUpdatingLocation()
+    }
+
+    @IBAction func finishTrackButtonTap(_ sender: Any) {
+        locationManager?.stopUpdatingLocation()
+    }
+
     private var beginLocation: CLLocation?
     private let cameraZoom: Float = 17
     private var locationManager: CLLocationManager?
@@ -28,6 +40,7 @@ class MapViewController: UIViewController {
 
     private func configureMap() {
         mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
     }
 
     private func configureLocationManager() {
@@ -44,10 +57,6 @@ class MapViewController: UIViewController {
 
     private func updateLocation() {
         locationManager?.requestLocation()
-        route = GMSPolyline()
-        routePath = GMSMutablePath()
-        route?.map = mapView
-        locationManager?.startUpdatingLocation()
     }
 }
 
@@ -64,7 +73,7 @@ extension MapViewController: CLLocationManagerDelegate {
             mapView.animate(to: camera)
             return
         }
-
+        
         if beginLocation!.distance(from: location) > 100.0 {
             beginLocation = location
             mapView.animate(to: camera) }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sRr-XO-l5v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,26 +17,60 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTP-3m-fIA" userLabel="Map View" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KTP-3m-fIA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="F8V-nc-j7X"/>
+                            <constraint firstItem="KTP-3m-fIA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="F8V-nc-j7X"/>
                             <constraint firstItem="KTP-3m-fIA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J1K-US-MDV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTP-3m-fIA" secondAttribute="trailing" id="bWj-Lf-9qF"/>
                             <constraint firstAttribute="bottom" secondItem="KTP-3m-fIA" secondAttribute="bottom" id="et2-6s-1T0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3zp-MK-enD">
+                        <barButtonItem key="leftBarButtonItem" title="Начать новый трек" id="ohK-CT-YZj">
+                            <connections>
+                                <action selector="newTrackButtonTap:" destination="BYZ-38-t0r" id="c3p-J6-NWD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Закончить трек" id="DKV-as-Y8f">
+                            <connections>
+                                <action selector="finishTrackButtonTap:" destination="BYZ-38-t0r" id="cdl-wr-1pH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="KTP-3m-fIA" id="3DX-bJ-fux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="73"/>
+            <point key="canvasLocation" x="942.02898550724649" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N8P-h2-aXT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sRr-XO-l5v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FhG-kl-XTZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="standardAppearance" backgroundEffect="regular"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OwZ-wk-EbI">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Qjs-LD-WbC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jNr-7t-ROa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="73"/>
         </scene>
     </scenes>
     <resources>

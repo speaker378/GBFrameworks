@@ -60,7 +60,9 @@ extension MapViewController: CLLocationManagerDelegate {
             return
         }
 
-        if beginLocation!.distance(from: location) > 100.0 { mapView.animate(to: camera) }
+        if beginLocation!.distance(from: location) > 100.0 {
+            beginLocation = location
+            mapView.animate(to: camera) }
     }
 
     func locationManager(_: CLLocationManager, didFailWithError error: Error) {

@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FBDC9FAC714323B26CA9AE /* Pods_GBFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17EBFD4DEF043864384AE670 /* Pods_GBFrameworks.framework */; };
 		5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D228579EEA0011B3D5 /* AppDelegate.swift */; };
 		5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */; };
-		5289B2D728579EEA0011B3D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D628579EEA0011B3D5 /* ViewController.swift */; };
+		5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D628579EEA0011B3D5 /* MapViewController.swift */; };
 		5289B2DA28579EEA0011B3D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2D828579EEA0011B3D5 /* Main.storyboard */; };
 		5289B2DC28579EEB0011B3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DB28579EEB0011B3D5 /* Assets.xcassets */; };
 		5289B2DF28579EEB0011B3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17EBFD4DEF043864384AE670 /* Pods_GBFrameworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBFrameworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5289B2CF28579EEA0011B3D5 /* GBFrameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBFrameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5289B2D228579EEA0011B3D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5289B2D628579EEA0011B3D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5289B2D628579EEA0011B3D5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5289B2D928579EEA0011B3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5289B2DB28579EEB0011B3D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5289B2DE28579EEB0011B3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5289B2E028579EEB0011B3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
+		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FBDC9FAC714323B26CA9AE /* Pods_GBFrameworks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5289B2D128579EEA0011B3D5 /* GBFrameworks */,
 				5289B2D028579EEA0011B3D5 /* Products */,
+				885F3EAB9087E804FCBD2924 /* Pods */,
+				72CDCFF2BAADC28700A90344 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +63,64 @@
 		5289B2D128579EEA0011B3D5 /* GBFrameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
-				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
-				5289B2D628579EEA0011B3D5 /* ViewController.swift */,
-				5289B2D828579EEA0011B3D5 /* Main.storyboard */,
-				5289B2DB28579EEB0011B3D5 /* Assets.xcassets */,
-				5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */,
-				5289B2E028579EEB0011B3D5 /* Info.plist */,
+				529EAD1A285904DF0078F5B3 /* App */,
+				529EAD19285904AB0078F5B3 /* Resources */,
+				529EAD182859046C0078F5B3 /* Environments */,
 			);
 			path = GBFrameworks;
+			sourceTree = "<group>";
+		};
+		529EAD182859046C0078F5B3 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2E028579EEB0011B3D5 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		529EAD19285904AB0078F5B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D828579EEA0011B3D5 /* Main.storyboard */,
+				5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */,
+				5289B2DB28579EEB0011B3D5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		529EAD1A285904DF0078F5B3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
+				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
+				529EAD1B285904EA0078F5B3 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		529EAD1B285904EA0078F5B3 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				5289B2D628579EEA0011B3D5 /* MapViewController.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17EBFD4DEF043864384AE670 /* Pods_GBFrameworks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		885F3EAB9087E804FCBD2924 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */,
+				97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5289B2E328579EEB0011B3D5 /* Build configuration list for PBXNativeTarget "GBFrameworks" */;
 			buildPhases = (
+				FB76B012778A596D934A2EAF /* [CP] Check Pods Manifest.lock */,
 				5289B2CB28579EEA0011B3D5 /* Sources */,
 				5289B2CC28579EEA0011B3D5 /* Frameworks */,
 				5289B2CD28579EEA0011B3D5 /* Resources */,
+				6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,12 +191,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB76B012778A596D934A2EAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBFrameworks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5289B2CB28579EEA0011B3D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5289B2D728579EEA0011B3D5 /* ViewController.swift in Sources */,
+				5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */,
 				5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */,
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +382,7 @@
 		};
 		5289B2E428579EEB0011B3D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,7 +390,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2THZTN36Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBFrameworks/Info.plist;
+				INFOPLIST_FILE = GBFrameworks/Environments/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,12 +406,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		5289B2E528579EEB0011B3D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,7 +420,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2THZTN36Q;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GBFrameworks/Info.plist;
+				INFOPLIST_FILE = GBFrameworks/Environments/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +436,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

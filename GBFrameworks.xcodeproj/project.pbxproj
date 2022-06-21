@@ -14,6 +14,7 @@
 		5289B2DA28579EEA0011B3D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2D828579EEA0011B3D5 /* Main.storyboard */; };
 		5289B2DC28579EEB0011B3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DB28579EEB0011B3D5 /* Assets.xcassets */; };
 		5289B2DF28579EEB0011B3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */; };
+		52CDFB992861C3290040B450 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB982861C3290040B450 /* RealmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5289B2DB28579EEB0011B3D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5289B2DE28579EEB0011B3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5289B2E028579EEB0011B3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CDFB982861C3290040B450 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +65,7 @@
 		5289B2D128579EEA0011B3D5 /* GBFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52CDFB972861C31C0040B450 /* Core */,
 				529EAD1A285904DF0078F5B3 /* App */,
 				529EAD19285904AB0078F5B3 /* Resources */,
 				529EAD182859046C0078F5B3 /* Environments */,
@@ -106,6 +109,14 @@
 			path = Flows;
 			sourceTree = "<group>";
 		};
+		52CDFB972861C31C0040B450 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				52CDFB982861C3290040B450 /* RealmService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +146,7 @@
 				5289B2CC28579EEA0011B3D5 /* Frameworks */,
 				5289B2CD28579EEA0011B3D5 /* Resources */,
 				6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */,
+				5468A50E5A1E6673605824A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +204,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5468A50E5A1E6673605824A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +270,7 @@
 				5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */,
 				5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */,
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
+				52CDFB992861C3290040B450 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

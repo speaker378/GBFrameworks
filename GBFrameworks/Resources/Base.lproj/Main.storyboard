@@ -31,16 +31,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3zp-MK-enD">
-                        <barButtonItem key="leftBarButtonItem" title="Начать новый трек" id="ohK-CT-YZj">
-                            <connections>
-                                <action selector="newTrackButtonTap:" destination="BYZ-38-t0r" id="c3p-J6-NWD"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Закончить трек" id="DKV-as-Y8f">
-                            <connections>
-                                <action selector="finishTrackButtonTap:" destination="BYZ-38-t0r" id="cdl-wr-1pH"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="new route" id="ohK-CT-YZj">
+                                <connections>
+                                    <action selector="newTrackButtonTap:" destination="BYZ-38-t0r" id="c3p-J6-NWD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="last route" id="tYb-9g-Kfu">
+                                <connections>
+                                    <action selector="lastTrackButtonTap:" destination="BYZ-38-t0r" id="FG9-KC-kd1"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="end route" id="DKV-as-Y8f">
+                                <connections>
+                                    <action selector="finishTrackButtonTap:" destination="BYZ-38-t0r" id="cdl-wr-1pH"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="KTP-3m-fIA" id="3DX-bJ-fux"/>

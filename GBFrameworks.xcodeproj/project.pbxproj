@@ -21,6 +21,8 @@
 		52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA428630A2C0040B450 /* AuthViewController.swift */; };
 		52CDFBA728630A470040B450 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CDFBA628630A470040B450 /* Auth.storyboard */; };
 		52CDFBAA286348F70040B450 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */; };
+		52CDFBAD286366410040B450 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBAC286366410040B450 /* RegistrationViewController.swift */; };
+		52CDFBAF286366570040B450 /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CDFBAE286366570040B450 /* Registration.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		52CDFBA428630A2C0040B450 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		52CDFBA628630A470040B450 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
+		52CDFBAC286366410040B450 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		52CDFBAE286366570040B450 /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,7 @@
 		529EAD1B285904EA0078F5B3 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				52CDFBAB286366240040B450 /* Registration */,
 				52CDFBA3286309FE0040B450 /* Auth */,
 				52CDFBA2286309CD0040B450 /* Map */,
 			);
@@ -165,6 +170,15 @@
 				52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */,
 			);
 			path = Ext;
+			sourceTree = "<group>";
+		};
+		52CDFBAB286366240040B450 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				52CDFBAC286366410040B450 /* RegistrationViewController.swift */,
+				52CDFBAE286366570040B450 /* Registration.storyboard */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
@@ -245,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CDFBAF286366570040B450 /* Registration.storyboard in Resources */,
 				52CDFBA728630A470040B450 /* Auth.storyboard in Resources */,
 				5289B2DF28579EEB0011B3D5 /* LaunchScreen.storyboard in Resources */,
 				5289B2DC28579EEB0011B3D5 /* Assets.xcassets in Resources */,
@@ -322,6 +337,7 @@
 				5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */,
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
 				52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */,
+				52CDFBAD286366410040B450 /* RegistrationViewController.swift in Sources */,
 				52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */,
 				52CDFBAA286348F70040B450 /* UserDefaults+Ext.swift in Sources */,
 				52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */,
@@ -483,7 +499,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Registration;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -515,7 +531,7 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
+				INFOPLIST_KEY_UIMainStoryboardFile = Registration;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

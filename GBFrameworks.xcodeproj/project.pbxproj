@@ -20,6 +20,7 @@
 		52CDFBA1286302C80040B450 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA0286302C80040B450 /* RealmUser.swift */; };
 		52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA428630A2C0040B450 /* AuthViewController.swift */; };
 		52CDFBA728630A470040B450 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52CDFBA628630A470040B450 /* Auth.storyboard */; };
+		52CDFBAA286348F70040B450 /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		52CDFBA0286302C80040B450 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		52CDFBA428630A2C0040B450 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		52CDFBA628630A470040B450 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 		52CDFB972861C31C0040B450 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				52CDFBA8286348E30040B450 /* Ext */,
 				52CDFB982861C3290040B450 /* RealmService.swift */,
 			);
 			path = Core;
@@ -154,6 +157,14 @@
 				52CDFBA628630A470040B450 /* Auth.storyboard */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		52CDFBA8286348E30040B450 /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				52CDFBA9286348F70040B450 /* UserDefaults+Ext.swift */,
+			);
+			path = Ext;
 			sourceTree = "<group>";
 		};
 		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
@@ -312,6 +323,7 @@
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
 				52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */,
 				52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */,
+				52CDFBAA286348F70040B450 /* UserDefaults+Ext.swift in Sources */,
 				52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */,
 				52CDFB992861C3290040B450 /* RealmService.swift in Sources */,
 				52CDFBA1286302C80040B450 /* RealmUser.swift in Sources */,

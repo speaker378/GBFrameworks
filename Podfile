@@ -5,6 +5,7 @@ target 'GBFrameworks' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'GoogleMaps', '6.2.1'
+  pod 'RealmSwift'
   # Pods for GBFrameworks
 
 end

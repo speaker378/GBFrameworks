@@ -14,6 +14,9 @@
 		5289B2DA28579EEA0011B3D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2D828579EEA0011B3D5 /* Main.storyboard */; };
 		5289B2DC28579EEB0011B3D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DB28579EEB0011B3D5 /* Assets.xcassets */; };
 		5289B2DF28579EEB0011B3D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5289B2DD28579EEB0011B3D5 /* LaunchScreen.storyboard */; };
+		52CDFB992861C3290040B450 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB982861C3290040B450 /* RealmService.swift */; };
+		52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */; };
+		52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5289B2DB28579EEB0011B3D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5289B2DE28579EEB0011B3D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5289B2E028579EEB0011B3D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CDFB982861C3290040B450 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoutePath.swift; sourceTree = "<group>"; };
+		52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoutePathManager.swift; sourceTree = "<group>"; };
 		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,7 @@
 		5289B2D128579EEA0011B3D5 /* GBFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52CDFB972861C31C0040B450 /* Core */,
 				529EAD1A285904DF0078F5B3 /* App */,
 				529EAD19285904AB0078F5B3 /* Resources */,
 				529EAD182859046C0078F5B3 /* Environments */,
@@ -93,7 +100,9 @@
 			children = (
 				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
 				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
+				52CDFB9A2861D3050040B450 /* Entity */,
 				529EAD1B285904EA0078F5B3 /* Flows */,
+				52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -104,6 +113,22 @@
 				5289B2D628579EEA0011B3D5 /* MapViewController.swift */,
 			);
 			path = Flows;
+			sourceTree = "<group>";
+		};
+		52CDFB972861C31C0040B450 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				52CDFB982861C3290040B450 /* RealmService.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		52CDFB9A2861D3050040B450 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		72CDCFF2BAADC28700A90344 /* Frameworks */ = {
@@ -135,6 +160,7 @@
 				5289B2CC28579EEA0011B3D5 /* Frameworks */,
 				5289B2CD28579EEA0011B3D5 /* Resources */,
 				6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */,
+				5468A50E5A1E6673605824A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +218,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5468A50E5A1E6673605824A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6BEB4953B0CB15ADD726E31E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,6 +284,9 @@
 				5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */,
 				5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */,
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
+				52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */,
+				52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */,
+				52CDFB992861C3290040B450 /* RealmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +348,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -362,6 +409,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -389,12 +437,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2THZTN36Q;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBFrameworks/Environments/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,12 +469,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V2THZTN36Q;
+				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GBFrameworks/Environments/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для работы необходимо поделиться вашим местоположением";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

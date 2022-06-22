@@ -17,6 +17,7 @@
 		52CDFB992861C3290040B450 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB982861C3290040B450 /* RealmService.swift */; };
 		52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */; };
 		52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */; };
+		52CDFBA1286302C80040B450 /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CDFBA0286302C80040B450 /* RealmUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		52CDFB982861C3290040B450 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoutePath.swift; sourceTree = "<group>"; };
 		52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoutePathManager.swift; sourceTree = "<group>"; };
+		52CDFBA0286302C80040B450 /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		97231444261A5D904113AC4D /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
 		E9914D62E197766DE550D683 /* Pods-GBFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.debug.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				52CDFB9B2861D3250040B450 /* RealmRoutePath.swift */,
+				52CDFBA0286302C80040B450 /* RealmUser.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */,
 				52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */,
 				52CDFB992861C3290040B450 /* RealmService.swift in Sources */,
+				52CDFBA1286302C80040B450 /* RealmUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

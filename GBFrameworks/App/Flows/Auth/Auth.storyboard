@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AuthViewController" customModule="GBFrameworks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="14e-Hj-fcf">
+                                <rect key="frame" x="70.5" y="285.5" width="273" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="логин" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8HT-92-ykF">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="nickname"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="пароль" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jNo-Pu-Bi2">
+                                        <rect key="frame" x="0.0" y="88" width="273" height="34"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agn-TS-q7T">
+                                <rect key="frame" x="152" y="524" width="110.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Регистрация"/>
+                                <connections>
+                                    <action selector="registrationButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yuy-qh-vVZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgE-ba-94a">
+                                <rect key="frame" x="152" y="453" width="110.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Войти"/>
+                                <connections>
+                                    <action selector="loginButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ieU-yN-jQz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="14e-Hj-fcf" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="centerY" multiplier="0.9" id="1Wb-Kc-9UD"/>
+                            <constraint firstItem="Agn-TS-q7T" firstAttribute="top" secondItem="EgE-ba-94a" secondAttribute="bottom" constant="40" id="8Dm-Ya-uBt"/>
+                            <constraint firstItem="EgE-ba-94a" firstAttribute="width" secondItem="Agn-TS-q7T" secondAttribute="width" id="Dlg-yK-Tqh"/>
+                            <constraint firstItem="14e-Hj-fcf" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.66" id="Jqr-Wg-o2H"/>
+                            <constraint firstItem="Agn-TS-q7T" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Tks-jZ-4X3"/>
+                            <constraint firstItem="EgE-ba-94a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="ceA-ji-9Tn"/>
+                            <constraint firstItem="EgE-ba-94a" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jYI-Nj-REV"/>
+                            <constraint firstItem="14e-Hj-fcf" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="y5w-cR-Nkj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTextField" destination="8HT-92-ykF" id="GFX-6r-F5l"/>
+                        <outlet property="passwordTextField" destination="jNo-Pu-Bi2" id="6Co-yL-Mja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="73"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

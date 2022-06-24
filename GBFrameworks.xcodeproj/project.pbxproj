@@ -13,6 +13,7 @@
 		52316A5B2864DDF000C1D649 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A5A2864DDF000C1D649 /* AuthCoordinator.swift */; };
 		52316A5D2864DE3E00C1D649 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A5C2864DE3E00C1D649 /* MapCoordinator.swift */; };
 		523CA17C28657EB1003DF72C /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CA17B28657EB1003DF72C /* RegistrationCoordinator.swift */; };
+		523CA17E2865B6D6003DF72C /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CA17D2865B6D6003DF72C /* Crypto.swift */; };
 		5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D228579EEA0011B3D5 /* AppDelegate.swift */; };
 		5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */; };
 		5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D628579EEA0011B3D5 /* MapViewController.swift */; };
@@ -37,6 +38,7 @@
 		52316A5A2864DDF000C1D649 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		52316A5C2864DE3E00C1D649 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		523CA17B28657EB1003DF72C /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		523CA17D2865B6D6003DF72C /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		5289B2CF28579EEA0011B3D5 /* GBFrameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBFrameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5289B2D228579EEA0011B3D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				52CDFBA8286348E30040B450 /* Ext */,
 				52CDFB982861C3290040B450 /* RealmService.swift */,
 				52316A582864DCB200C1D649 /* BaseCoordinator.swift */,
+				523CA17D2865B6D6003DF72C /* Crypto.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */,
 				52CDFB9E2861D42F0040B450 /* RealmRoutePathManager.swift in Sources */,
 				52CDFBAD286366410040B450 /* RegistrationViewController.swift in Sources */,
+				523CA17E2865B6D6003DF72C /* Crypto.swift in Sources */,
 				523CA17C28657EB1003DF72C /* RegistrationCoordinator.swift in Sources */,
 				52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */,
 				52316A592864DCB200C1D649 /* BaseCoordinator.swift in Sources */,

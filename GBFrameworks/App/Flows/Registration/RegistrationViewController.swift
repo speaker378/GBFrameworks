@@ -19,7 +19,8 @@ class RegistrationViewController: UIViewController {
         guard let login = loginTextField.text,
               let password = passwordTextField.text
         else { return }
-        createUser(login: login, password: password)
+        let passwordHash = Crypto.hash(password)
+        createUser(login: login, password: passwordHash)
         endOfRegistration?()
     }
 

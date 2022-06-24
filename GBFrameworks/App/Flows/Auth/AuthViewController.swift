@@ -11,6 +11,8 @@ class AuthViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var onLogin: (() -> Void)?
+    var onRegistration: (() -> Void)?
 
     @IBAction func loginButtonTap(_ sender: UIButton) {
         guard let login = loginTextField.text,
@@ -32,11 +34,11 @@ class AuthViewController: UIViewController {
             return
         }
         UserDefaults.isLogin = true
-        //TODO: переход на экран с картой
+        onLogin?()
     }
 
     @IBAction func registrationButtonTap(_ sender: UIButton) {
-        //TODO: переход на экран с регистрацией
+        onRegistration?()
     }
 
     override func viewDidLoad() {

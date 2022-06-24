@@ -13,11 +13,14 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registrationButton: UIButton!
 
+    var endOfRegistration: (() -> Void)?
+
     @IBAction func registrationButtonTap(_ sender: UIButton) {
         guard let login = loginTextField.text,
               let password = passwordTextField.text
         else { return }
         createUser(login: login, password: password)
+        endOfRegistration?()
     }
 
     override func viewDidLoad() {

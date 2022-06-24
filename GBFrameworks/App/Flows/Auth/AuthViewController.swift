@@ -24,11 +24,13 @@ class AuthViewController: UIViewController {
             return
         }
 
+        let passwordHash = Crypto.hash(password)
+
         guard let user = findUserBy(login: login) else {
             showAlert("Пользователь не найден")
             return
         }
-        guard user.password == password else {
+        guard user.password == passwordHash else {
             showAlert("Не верный пароль")
             passwordTextField.text = ""
             return

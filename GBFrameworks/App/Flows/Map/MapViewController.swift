@@ -44,12 +44,17 @@ class MapViewController: UIViewController {
         }
     }
 
+    @IBAction func logoutButtonTap(_ sender: Any) {
+        getOut?()
+    }
+
     private var beginLocation: CLLocation?
     private let cameraZoom: Float = 17
     private var locationManager: CLLocationManager?
     private var route: GMSPolyline?
     private var routePath: GMSMutablePath?
     private let realmRoutePathManager = RealmRoutePathManager()
+    var getOut: (() -> Void)?
 
     
     override func viewDidLoad() {

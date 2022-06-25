@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AuthViewController: UIViewController {
 
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registrationButton: UIButton!
     var onLogin: (() -> Void)?
     var onRegistration: (() -> Void)?
 
@@ -18,11 +22,6 @@ class AuthViewController: UIViewController {
         guard let login = loginTextField.text,
               let password = passwordTextField.text
         else { return }
-
-        guard login != "", password != "" else {
-            showAlert("Введите логин и пароль")
-            return
-        }
 
         let passwordHash = Crypto.hash(password)
 
@@ -45,6 +44,7 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureLoginBindings()
     }
 
     private func findUserBy(login: String) -> RealmUser? {
@@ -57,5 +57,19 @@ class AuthViewController: UIViewController {
         let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         present(alert, animated: true)
+    }
+
+    private func configureLoginBindings() {
+        Observable
+            .combineLatest(
+                loginTextField.rx.text,
+                passwordTextField.rx.text
+            )
+            .map { login, password in
+                return ((login ?? "").count >= 3) && (password ?? "").count >= 8
+            }
+            .bind { [weak loginButton] inputField in
+                loginButton?.isEnabled = inputField
+            }
     }
 }

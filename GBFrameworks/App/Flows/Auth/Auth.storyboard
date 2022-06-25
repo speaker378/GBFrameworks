@@ -64,8 +64,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="EgE-ba-94a" id="buQ-8b-Ff6"/>
                         <outlet property="loginTextField" destination="8HT-92-ykF" id="GFX-6r-F5l"/>
                         <outlet property="passwordTextField" destination="jNo-Pu-Bi2" id="6Co-yL-Mja"/>
+                        <outlet property="registrationButton" destination="Agn-TS-q7T" id="biX-sF-9wY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

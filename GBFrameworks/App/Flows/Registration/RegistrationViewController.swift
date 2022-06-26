@@ -20,8 +20,8 @@ class RegistrationViewController: UIViewController {
               let password = passwordTextField.text
         else { return }
         let passwordHash = Crypto.hash(password)
-        createUser(login: login, password: passwordHash)
-        endOfRegistration?()
+        let isSuccess = createUser(login: login, password: passwordHash)
+        isSuccess ? endOfRegistration?() : print("User not created")
     }
 
     override func viewDidLoad() {
@@ -48,13 +48,14 @@ class RegistrationViewController: UIViewController {
         registrationButton.isEnabled = true
     }
 
-    private func createUser(login: String, password: String) {
+    private func createUser(login: String, password: String) -> Bool {
         let user = RealmUser(login: login, password: password)
         do {
             try RealmService.save(items: [user])
         } catch {
             print(error)
-            return
+            return false
         }
+        return true
     }
 }

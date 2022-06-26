@@ -14,6 +14,7 @@
 		52316A5D2864DE3E00C1D649 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A5C2864DE3E00C1D649 /* MapCoordinator.swift */; };
 		523CA17C28657EB1003DF72C /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CA17B28657EB1003DF72C /* RegistrationCoordinator.swift */; };
 		523CA17E2865B6D6003DF72C /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CA17D2865B6D6003DF72C /* Crypto.swift */; };
+		523CA18028678C33003DF72C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523CA17F28678C33003DF72C /* LocationManager.swift */; };
 		5289B2D328579EEA0011B3D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D228579EEA0011B3D5 /* AppDelegate.swift */; };
 		5289B2D528579EEA0011B3D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */; };
 		5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5289B2D628579EEA0011B3D5 /* MapViewController.swift */; };
@@ -39,6 +40,7 @@
 		52316A5C2864DE3E00C1D649 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		523CA17B28657EB1003DF72C /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		523CA17D2865B6D6003DF72C /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		523CA17F28678C33003DF72C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		5289B2CF28579EEA0011B3D5 /* GBFrameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBFrameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5289B2D228579EEA0011B3D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,9 +134,10 @@
 				5289B2D228579EEA0011B3D5 /* AppDelegate.swift */,
 				5289B2D428579EEA0011B3D5 /* SceneDelegate.swift */,
 				52316A562864DC8600C1D649 /* AppCoordinator.swift */,
+				52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */,
+				523CA17F28678C33003DF72C /* LocationManager.swift */,
 				52CDFB9A2861D3050040B450 /* Entity */,
 				529EAD1B285904EA0078F5B3 /* Flows */,
-				52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52316A572864DC8600C1D649 /* AppCoordinator.swift in Sources */,
+				523CA18028678C33003DF72C /* LocationManager.swift in Sources */,
 				52316A5D2864DE3E00C1D649 /* MapCoordinator.swift in Sources */,
 				52316A5B2864DDF000C1D649 /* AuthCoordinator.swift in Sources */,
 				5289B2D728579EEA0011B3D5 /* MapViewController.swift in Sources */,
@@ -428,7 +432,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -489,7 +493,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

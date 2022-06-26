@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
@@ -47,6 +48,7 @@ class MapViewController: UIViewController {
         getOut?()
     }
 
+    private let disposeBag = DisposeBag()
     private var beginLocation: CLLocation?
     private let cameraZoom: Float = 17
     private var locationManager = LocationManager.instance
@@ -80,6 +82,7 @@ class MapViewController: UIViewController {
                 let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
                 self?.mapView.animate(to: position)
             }
+            .disposed(by: disposeBag)
     }
 
     private func updateLocation() {

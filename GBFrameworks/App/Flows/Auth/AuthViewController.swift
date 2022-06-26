@@ -17,6 +17,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var registrationButton: UIButton!
     var onLogin: (() -> Void)?
     var onRegistration: (() -> Void)?
+    private let disposeBag = DisposeBag()
 
     @IBAction func loginButtonTap(_ sender: UIButton) {
         guard let login = loginTextField.text,
@@ -71,5 +72,6 @@ class AuthViewController: UIViewController {
             .bind { [weak loginButton] inputField in
                 loginButton?.isEnabled = inputField
             }
+            .disposed(by: disposeBag)
     }
 }

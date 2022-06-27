@@ -6,6 +6,8 @@ target 'GBFrameworks' do
   use_frameworks!
   pod 'GoogleMaps', '6.2.1'
   pod 'RealmSwift'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
   # Pods for GBFrameworks
 
 end

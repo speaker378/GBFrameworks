@@ -7,19 +7,19 @@
 
 import UIKit
 import GoogleMaps
-import CoreLocation
+import RxSwift
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
 
     @IBAction func newTrackButtonTap(_ sender: Any) {
         newRoutePath()
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
         realmRoutePathManager.start()
     }
 
     @IBAction func finishTrackButtonTap(_ sender: Any) {
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         realmRoutePathManager.stop()
     }
 
@@ -48,9 +48,10 @@ class MapViewController: UIViewController {
         getOut?()
     }
 
+    private let disposeBag = DisposeBag()
     private var beginLocation: CLLocation?
     private let cameraZoom: Float = 17
-    private var locationManager: CLLocationManager?
+    private var locationManager = LocationManager.instance
     private var route: GMSPolyline?
     private var routePath: GMSMutablePath?
     private let realmRoutePathManager = RealmRoutePathManager()
@@ -70,19 +71,22 @@ class MapViewController: UIViewController {
     }
 
     private func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
-        locationManager?.allowsBackgroundLocationUpdates = true
-        locationManager?.pausesLocationUpdatesAutomatically = false
-        locationManager?.startMonitoringSignificantLocationChanges()
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager?.distanceFilter = 10
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                self?.realmRoutePathManager.add(coordinate: location.coordinate)
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+                self?.mapView.animate(to: position)
+            }
+            .disposed(by: disposeBag)
     }
 
     private func updateLocation() {
-        locationManager?.requestLocation()
+        locationManager.requestLocation()
     }
 
     private func newRoutePath() {
@@ -98,30 +102,3 @@ class MapViewController: UIViewController {
         present(alert, animated: true)
     }
 }
-
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-
-        routePath?.add(location.coordinate)
-        route?.path = routePath
-        realmRoutePathManager.add(coordinate: location.coordinate)
-
-        let camera = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: cameraZoom)
-        guard beginLocation != nil else {
-            beginLocation = location
-            mapView.animate(to: camera)
-            return
-        }
-
-        if beginLocation!.distance(from: location) > 100.0 {
-            beginLocation = location
-            mapView.animate(to: camera)
-        }
-    }
-
-    func locationManager(_: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
-}
-

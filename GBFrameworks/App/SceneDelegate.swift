@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var coordinator: AppCoordinator?
     let blindView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
+    let notificationManager = NotificationManager.share
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -31,12 +32,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         blindView.removeFromSuperview()
+        removeAllNotification()
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
         guard let window = window else { return }
         blindView.frame = window.bounds
         window.rootViewController?.view.addSubview(blindView)
+        sendNotification()
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
@@ -50,6 +53,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    private func sendNotification() {
+        let timeSlot = 30.0 * 60.0
+        let currentBadge = UIApplication.shared.applicationIconBadgeNumber
+        notificationManager.sendNotification(title: "Возвращайся", subtitle: "Тебя давно не было", body: "Все уже заждались", timeSlot: timeSlot, badge: (UInt(currentBadge + 1)))
+    }
 
+    private func removeAllNotification() {
+        notificationManager.removeAllNotifications()
+    }
 }
 

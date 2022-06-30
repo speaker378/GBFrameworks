@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BD5A1E0AFC7A52228D232F7 /* Pods_GBFrameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69A8C33BCA2D65A4D87D8779 /* Pods_GBFrameworks.framework */; };
+		5219C5B7286D6D17000E2A86 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5219C5B6286D6D17000E2A86 /* NotificationManager.swift */; };
 		52316A572864DC8600C1D649 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A562864DC8600C1D649 /* AppCoordinator.swift */; };
 		52316A592864DCB200C1D649 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A582864DCB200C1D649 /* BaseCoordinator.swift */; };
 		52316A5B2864DDF000C1D649 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52316A5A2864DDF000C1D649 /* AuthCoordinator.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		51E2D1434E6BA745C9F914DB /* Pods-GBFrameworks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBFrameworks.release.xcconfig"; path = "Target Support Files/Pods-GBFrameworks/Pods-GBFrameworks.release.xcconfig"; sourceTree = "<group>"; };
+		5219C5B6286D6D17000E2A86 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		52316A562864DC8600C1D649 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		52316A582864DCB200C1D649 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		52316A5A2864DDF000C1D649 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				52316A562864DC8600C1D649 /* AppCoordinator.swift */,
 				52CDFB9D2861D42F0040B450 /* RealmRoutePathManager.swift */,
 				523CA17F28678C33003DF72C /* LocationManager.swift */,
+				5219C5B6286D6D17000E2A86 /* NotificationManager.swift */,
 				52CDFB9A2861D3050040B450 /* Entity */,
 				529EAD1B285904EA0078F5B3 /* Flows */,
 			);
@@ -366,6 +369,7 @@
 				523CA17E2865B6D6003DF72C /* Crypto.swift in Sources */,
 				523CA17C28657EB1003DF72C /* RegistrationCoordinator.swift in Sources */,
 				52CDFBA528630A2C0040B450 /* AuthViewController.swift in Sources */,
+				5219C5B7286D6D17000E2A86 /* NotificationManager.swift in Sources */,
 				52316A592864DCB200C1D649 /* BaseCoordinator.swift in Sources */,
 				52CDFBAA286348F70040B450 /* UserDefaults+Ext.swift in Sources */,
 				52CDFB9C2861D3250040B450 /* RealmRoutePath.swift in Sources */,

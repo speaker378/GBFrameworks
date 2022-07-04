@@ -48,11 +48,18 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <barButtonItem key="rightBarButtonItem" title="logout" id="KiO-IN-stz">
-                            <connections>
-                                <action selector="logoutButtonTap:" destination="BYZ-38-t0r" id="8HX-VG-aEx"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="logout" id="KiO-IN-stz">
+                                <connections>
+                                    <action selector="logoutButtonTap:" destination="BYZ-38-t0r" id="8HX-VG-aEx"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="selfie" id="hVn-jX-0X0" userLabel="selfie">
+                                <connections>
+                                    <action selector="takeASelfie:" destination="BYZ-38-t0r" id="sZi-gL-yef"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="KTP-3m-fIA" id="3DX-bJ-fux"/>
